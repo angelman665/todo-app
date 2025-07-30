@@ -1,0 +1,15 @@
+services:
+  db: 
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: 123
+      MYSQL_DATABASE: todo-app-db
+      MYSQL_USER: rosty
+      MYSQL_PASSWORD: 123
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+
+volumes:
+  mysql-data: {}
